@@ -61,10 +61,10 @@ export default function Reviews() {
           </p>
         </div>
 
-        <div className="flex flex-col gap-6 relative w-screen">
+        <div className="flex flex-col gap-6 w-full max-w-[100vw] overflow-hidden">
           {/* Row 1 - Moves Right to Left */}
-          <div className="flex w-[200vw] sm:w-[150vw] md:w-[120vw] lg:w-[max-content] animate-marquee">
-            <div className="flex gap-6 pr-6 w-1/2">
+          <div className="flex w-max animate-marquee gap-6">
+            <div className="flex gap-6 pr-6">
               {row1.slice(0, row1.length / 2).map((review, i) => (
                 <div
                   key={`r1-1-${i}`}
@@ -86,7 +86,7 @@ export default function Reviews() {
                 </div>
               ))}
             </div>
-            <div className="flex gap-6 pr-6 w-1/2">
+            <div className="flex gap-6 pr-6">
               {row1.slice(row1.length / 2).map((review, i) => (
                 <div
                   key={`r1-2-${i}`}
@@ -111,8 +111,8 @@ export default function Reviews() {
           </div>
 
           {/* Row 2 - Moves Left to Right */}
-          <div className="flex w-[200vw] sm:w-[150vw] md:w-[120vw] lg:w-[max-content] animate-marquee [animation-direction:reverse] [animation-duration:25s]">
-            <div className="flex gap-6 pr-6 w-1/2">
+          <div className="flex w-max animate-marquee [animation-direction:reverse] [animation-duration:25s] gap-6">
+            <div className="flex gap-6 pr-6">
               {row2.slice(0, row2.length / 2).map((review, i) => (
                 <div
                   key={`r2-1-${i}`}
@@ -134,7 +134,7 @@ export default function Reviews() {
                 </div>
               ))}
             </div>
-            <div className="flex gap-6 pr-6 w-1/2">
+            <div className="flex gap-6 pr-6">
               {row2.slice(row2.length / 2).map((review, i) => (
                 <div
                   key={`r2-2-${i}`}

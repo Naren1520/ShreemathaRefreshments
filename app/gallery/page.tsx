@@ -29,7 +29,7 @@ export default function Gallery() {
         </p>
       </div>
 
-      <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 grid-auto-rows-[250px] md:grid-rows-[repeat(3,280px)] gap-4 md:gap-6 animate-fadeUp">
+      <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 auto-rows-[250px] md:grid-rows-[repeat(3,280px)] gap-4 md:gap-6 animate-fadeUp">
         {images.map((img) => (
           <div key={img.id} className={`relative overflow-hidden rounded-3xl group ${img.gridClass}`}>
             <Image
