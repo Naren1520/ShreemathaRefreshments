@@ -292,9 +292,7 @@ export default function Home() {
 
             {/* PG ROOMS CARD */}
             <a
-              href="https://pgrooms.shreemathaenterprises.com"
-              target="_blank"
-              rel="noreferrer"
+              href="/pg"
               className="group relative overflow-hidden rounded-[12px] border border-white/5 bg-[#060F14] flex flex-col h-[400px] transition-all duration-500 hover:border-[#3182CE]/30"
             >
               <div className="h-[45%] w-full relative overflow-hidden">
