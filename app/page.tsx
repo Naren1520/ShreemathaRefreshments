@@ -5,7 +5,7 @@ import FloatingLeaves from "@/components/FloatingLeaves";
 import ReviewCarousel from "@/components/ReviewCarousel";
 import FadeInTitle from "@/components/FadeInTitle";
 import AnimatedNumber from "@/components/AnimatedNumber";
-import { User, Users, Home as HomeIcon, Bus, Tractor, Building2 } from "lucide-react";
+import { User, Users, Home as HomeIcon, Bus, Tractor, Building2, MoveRight, Leaf, MessageCircle } from "lucide-react";
 
 export default function Home() {
   return (
@@ -210,76 +210,140 @@ export default function Home() {
         </div>
       </section>
 
-      {/* OTHER SERVICES (Moved above Reviews) */}
-      <section className="bg-deep px-6 py-20 md:py-[120px] md:px-[60px]">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="text-center mb-[60px]">
-            <div className="inline-flex justify-center items-center text-[10px] tracking-[4px] uppercase text-lime mb-4">
-              Shreematha Group
+      {/* OTHER SERVICES */}
+      <section className="relative px-6 py-16 md:py-20 flex items-center justify-center bg-[#050B05] overflow-hidden">
+        <div className="max-w-[1100px] w-full relative z-10 mx-auto">
+          {/* Header */}
+          <div className="text-center mb-10 md:mb-12">
+            <div className="inline-flex justify-center items-center text-[10px] tracking-[4px] uppercase text-[#38A169] mb-4 gap-3">
+              <span className="w-8 h-[1px] bg-[#38A169]/50 block" />
+              <Leaf size={12} />
+              SHREEMATHA GROUP
+              <span className="w-8 h-[1px] bg-[#38A169]/50 block" />
             </div>
-            <FadeInTitle 
-               text1="More From Our" 
-               highlight="Family"
-               className="font-playfair text-[clamp(36px,5vw,58px)] leading-[1.1] text-white" 
-            />
-            <p className="text-[15px] leading-[1.8] text-text-muted mt-5">
+            <h2 className="font-playfair text-[clamp(40px,5vw,56px)] leading-[1.1] text-white mb-4">
+              More From <br className="md:hidden" />
+              Our <span className="text-[#68D391] italic font-light">Family</span>
+            </h2>
+            <p className="text-[14px] leading-[1.6] text-white/50 max-w-[300px] mx-auto font-sans">
               Shreematha Enterprises serves you beyond the dining table.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-0.5">
+          {/* Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            {/* TRAVELS CARD */}
             <a
               href="https://travels.shreemathaenterprises.com"
               target="_blank"
               rel="noreferrer"
-              className="bg-forest border border-green-light/10 p-[48px_36px] no-underline block relative overflow-hidden transition-all duration-400 cursor-none group hover:-translate-y-1.5 hover:border-green-light/40 animate-fadeUp"
+              className="group relative overflow-hidden rounded-[12px] border border-white/5 bg-[#091209] flex flex-col h-[400px] transition-all duration-500 hover:border-[#38A169]/30"
             >
-              <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-lime transition-all duration-400 group-hover:w-full"></div>
-              <span className="text-lime mb-6 block"><Bus size={44} strokeWidth={1.5} /></span>
-              <div className="font-playfair text-[24px] text-white mb-3">Shreematha Travels</div>
-              <div className="text-[14px] text-text-muted leading-[1.7] mb-7">
-                Comfortable, reliable travel services for tours, corporate trips and airport transfers across Karnataka.
+              <div className="h-[45%] w-full relative overflow-hidden">
+                <div className="absolute inset-0 bg-[url('/images/travels1.jpg')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-[#091209]" />
+                <div className="absolute top-4 left-4 w-12 h-12 rounded-full border border-[#38A169] flex items-center justify-center bg-black/40 backdrop-blur-sm z-10">
+                  <Bus size={20} className="text-[#38A169]" strokeWidth={1.5} />
+                </div>
               </div>
-              <div className="text-[11px] tracking-[2px] uppercase text-lime flex items-center gap-2 transition-all duration-300 group-hover:gap-4">
-                Visit Website →
+              
+              <div className="relative z-20 flex flex-col h-[55%] p-6 justify-between">
+                <div>
+                  <h3 className="font-playfair text-[24px] text-white leading-tight mb-2">Shreematha Travels</h3>
+                  <p className="text-[12px] font-sans text-white/50 leading-[1.6] mb-4">
+                    Comfortable, reliable travel services for tours, corporate trips and airport transfers across Karnataka.
+                  </p>
+                </div>
+                
+                <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-[#38A169]/50 text-[#38A169] text-[10px] font-bold tracking-[1px] uppercase transition-all duration-300 group-hover:bg-[#38A169]/10 self-start">
+                  Explore Now <MoveRight size={12} className="ml-1 transition-transform group-hover:translate-x-1" />
+                </div>
               </div>
             </a>
 
+            {/* EARTHMOVERS CARD */}
             <a
               href="https://earthmovers.shreemathaenterprises.com"
               target="_blank"
               rel="noreferrer"
-              className="bg-forest border border-green-light/10 p-[48px_36px] no-underline block relative overflow-hidden transition-all duration-400 cursor-none group hover:-translate-y-1.5 hover:border-green-light/40 animate-fadeUp"
-              style={{ animationDelay: '0.15s' }}
+              className="group relative overflow-hidden rounded-[12px] border border-white/5 bg-[#121008] flex flex-col h-[400px] transition-all duration-500 hover:border-[#D69E2E]/30"
             >
-              <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-lime transition-all duration-400 group-hover:w-full"></div>
-              <span className="text-lime mb-6 block"><Tractor size={44} strokeWidth={1.5} /></span>
-              <div className="font-playfair text-[24px] text-white mb-3">Earthmovers</div>
-              <div className="text-[14px] text-text-muted leading-[1.7] mb-7">
-                Heavy-duty excavation and earthmoving for construction, infrastructure and land development projects.
+              <div className="h-[45%] w-full relative overflow-hidden">
+                <div className="absolute inset-0 bg-[url('/images/earthmovers1.jpg')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-[#121008]" />
+                <div className="absolute top-4 left-4 w-12 h-12 rounded-full border border-[#D69E2E] flex items-center justify-center bg-black/40 backdrop-blur-sm z-10">
+                  <Tractor size={20} className="text-[#D69E2E]" strokeWidth={1.5} />
+                </div>
               </div>
-              <div className="text-[11px] tracking-[2px] uppercase text-lime flex items-center gap-2 transition-all duration-300 group-hover:gap-4">
-                Visit Website →
+              
+              <div className="relative z-20 flex flex-col h-[55%] p-6 justify-between">
+                <div>
+                  <h3 className="font-playfair text-[24px] text-white leading-tight mb-2">Earthmovers</h3>
+                  <p className="text-[12px] font-sans text-white/50 leading-[1.6] mb-4">
+                    Heavy-duty excavation and earthmoving for construction, infrastructure and land development projects.
+                  </p>
+                </div>
+                
+                <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-[#D69E2E]/50 text-[#D69E2E] text-[10px] font-bold tracking-[1px] uppercase transition-all duration-300 group-hover:bg-[#D69E2E]/10 self-start">
+                  Explore Now <MoveRight size={12} className="ml-1 transition-transform group-hover:translate-x-1" />
+                </div>
               </div>
             </a>
 
+            {/* PG ROOMS CARD */}
             <a
               href="https://pgrooms.shreemathaenterprises.com"
               target="_blank"
               rel="noreferrer"
-              className="bg-forest border border-green-light/10 p-[48px_36px] no-underline block relative overflow-hidden transition-all duration-400 cursor-none group hover:-translate-y-1.5 hover:border-green-light/40 animate-fadeUp"
-              style={{ animationDelay: '0.3s' }}
+              className="group relative overflow-hidden rounded-[12px] border border-white/5 bg-[#060F14] flex flex-col h-[400px] transition-all duration-500 hover:border-[#3182CE]/30"
             >
-              <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-lime transition-all duration-400 group-hover:w-full"></div>
-              <span className="text-lime mb-6 block"><Building2 size={44} strokeWidth={1.5} /></span>
-              <div className="font-playfair text-[24px] text-white mb-3">PG Rooms</div>
-              <div className="text-[14px] text-text-muted leading-[1.7] mb-7">
-                Safe, affordable and homely PG accommodation for students and working professionals in Mangaluru.
+              <div className="h-[45%] w-full relative overflow-hidden">
+                <div className="absolute inset-0 bg-[url('/images/pg1.webp')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-[#060F14]" />
+                <div className="absolute top-4 left-4 w-12 h-12 rounded-full border border-[#3182CE] flex items-center justify-center bg-black/40 backdrop-blur-sm z-10">
+                  <Building2 size={20} className="text-[#3182CE]" strokeWidth={1.5} />
+                </div>
               </div>
-              <div className="text-[11px] tracking-[2px] uppercase text-lime flex items-center gap-2 transition-all duration-300 group-hover:gap-4">
-                Visit Website →
+              
+              <div className="relative z-20 flex flex-col h-[55%] p-6 justify-between">
+                <div>
+                  <h3 className="font-playfair text-[24px] text-white leading-tight mb-2">PG Rooms</h3>
+                  <p className="text-[12px] font-sans text-white/50 leading-[1.6] mb-4">
+                    Safe, affordable and homely PG accommodation for students and working professionals in Mangaluru.
+                  </p>
+                </div>
+                
+                <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-[#3182CE]/50 text-[#3182CE] text-[10px] font-bold tracking-[1px] uppercase transition-all duration-300 group-hover:bg-[#3182CE]/10 self-start">
+                  Explore Now <MoveRight size={12} className="ml-1 transition-transform group-hover:translate-x-1" />
+                </div>
               </div>
             </a>
+          </div>
+
+          {/* BOTTOM BANNER */}
+          <div className="bg-[#0D1F0D] border border-[#38A169]/20 rounded-[12px] p-4 md:p-5 flex flex-col lg:flex-row items-center justify-between gap-4 overflow-hidden relative mt-8">
+            <div className="flex items-center gap-3 z-10">
+              <div className="w-8 h-8 rounded-full border border-[#38A169]/30 flex items-center justify-center shrink-0 bg-[#091209]">
+                <Leaf size={14} className="text-[#38A169]" strokeWidth={1.5} />
+              </div>
+              <h2 className="font-playfair text-[16px] md:text-[18px] text-white m-0">
+                One Family. Many Services. <span className="text-[#38A169] italic">Endless Commitment.</span>
+              </h2>
+            </div>
+            
+            <div className="flex flex-col md:flex-row items-center gap-4 lg:border-l lg:border-white/10 lg:pl-5 z-10">
+              <p className="text-white/50 text-[11px] text-center md:text-left max-w-[240px] leading-relaxed">
+                Discover how our family of businesses can serve you better.
+              </p>
+              <a 
+                href="https://wa.me/91XXXXXXXXXX" 
+                target="_blank" 
+                rel="noreferrer"
+                className="bg-[#2B6D2B] hover:bg-[#38A169] text-white px-5 py-2 rounded-[6px] text-[10px] font-bold tracking-[1px] uppercase transition-all duration-300 flex items-center justify-center gap-2 shrink-0 cursor-none w-full md:w-auto"
+              >
+                Get In Touch <MessageCircle size={12} strokeWidth={2} />
+              </a>
+            </div>
           </div>
         </div>
       </section>
