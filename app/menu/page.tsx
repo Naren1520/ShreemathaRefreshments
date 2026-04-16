@@ -5,7 +5,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import FadeInTitle from "@/components/FadeInTitle";
 import { useCart } from "@/context/CartContext";
-import { Plus, Minus } from "lucide-react";
+import { Plus, Minus, Search } from "lucide-react";
 
 const menuItems = [
   {
@@ -66,14 +66,17 @@ const menuItems = [
 
 export default function Menu() {
   const [filter, setFilter] = useState("All");
+  const [searchQuery, setSearchQuery] = useState("");
   const { cart, addToCart, removeFromCart } = useCart();
 
   const filters = ["All", "Breakfast", "Meals", "Snacks", "Beverages"];
 
-  const filteredMenu =
-    filter === "All"
-      ? menuItems
-      : menuItems.filter((item) => item.category === filter);
+  const filteredMenu = menuItems.filter((item) => {
+    const matchesCategory = filter === "All" || item.category === filter;
+    const matchesSearch = item.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                          item.desc.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
 
   const getItemQuantity = (id: number) => {
     return cart.find((item) => item.id === id)?.quantity || 0;
@@ -95,20 +98,29 @@ export default function Menu() {
             />
           </div>
           
-          <div className="flex gap-2 flex-wrap">
-            {filters.map((f) => (
-              <button
-                key={f}
-                onClick={() => setFilter(f)}
-                className={`bg-transparent border border-green-light/30 px-5 py-2 text-[12px] tracking-[1.5px] uppercase transition-all duration-300 cursor-none hover:bg-green-mid hover:border-green-mid hover:text-white ${
-                  filter === f
-                    ? "bg-green-mid border-green-mid text-white"
-                    : "text-text-muted"
-                }`}
-              >
-                {f}
-              </button>
-            ))}
+          <div className="flex flex-col items-end gap-4 w-full md:w-auto">
+            <div className="relative w-full md:w-64 max-w-full">
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-[14px] h-[14px] text-white/50" />
+              <input
+                type="text"
+                placeholder="Search menu..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full bg-[#141610] border border-white/10 rounded-[30px] pl-[38px] pr-5 py-[10px] text-[12px] tracking-[1px] text-white placeholder:text-white/40 focus:outline-none focus:border-lime/50 transition-all duration-300"
+              />
+            </div>
+            
+            <div className="flex gap-2 flex-wrap justify-end">
+              {filters.map((f) => (
+                <button
+                  key={f}
+                  onClick={() => setFilter(f)}
+                  className={`bg-transparent border border-green-light/30 px-5 py-2 text-[12px] tracking-[1.5px] uppercase transition-all duration-300 cursor-none hover:bg-green-mid hover:border-green-mid hover:text-white ${filter === f ? "bg-green-mid border-green-mid text-white" : "text-text-muted"}`}
+                >
+                  {f}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
 
