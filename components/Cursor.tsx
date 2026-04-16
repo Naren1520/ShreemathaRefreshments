@@ -39,12 +39,12 @@ export default function Cursor() {
     <>
       <div 
         ref={cursorRef} 
-        className="w-3 h-3 bg-lime rounded-full fixed top-0 left-0 pointer-events-none z-[9999] mix-blend-difference transition-transform duration-[0.05s]" 
+        className="hidden md:block w-3 h-3 bg-lime rounded-full fixed top-0 left-0 pointer-events-none z-[9999] mix-blend-difference transition-transform duration-[0.05s]" 
         style={{ willChange: 'transform' }} 
       />
       <div 
         ref={ringRef} 
-        className="w-9 h-9 border-[1.5px] border-lime rounded-full fixed top-0 left-0 pointer-events-none z-[9998] opacity-60 transition-transform duration-[0.1s]" 
+        className="hidden md:block w-9 h-9 border-[1.5px] border-lime rounded-full fixed top-0 left-0 pointer-events-none z-[9998] opacity-60 transition-transform duration-[0.1s]" 
         style={{ willChange: 'transform' }} 
       />
     </>
