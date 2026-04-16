@@ -131,33 +131,42 @@ export default function Home() {
             <div className="w-[1px] h-12 bg-lime/30 mx-auto mt-6"></div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 title: "Udupi Thali",
                 desc: "A wholesome spread of rice, rasam, freshly ground curries, and payasam served traditionally.",
-                icon: "🍽️"
+                image: "/images/img1.jpg"
               },
               {
                 title: "Neer Dosa",
                 desc: "Paper-thin, incredibly soft rice crêpes, served with fresh coconut chutney and vegetable kurma.",
-                icon: "🥞"
+                image: "/images/img2.avif"
               },
               {
                 title: "Mangaluru Buns",
                 desc: "Mildly sweet, fluffy banana poori—a local breakfast favorite that melts in your mouth.",
-                icon: "🥟"
+                image: "/images/img3.webp"
               },
               {
                 title: "Filter Coffee",
                 desc: "The perfect finish to your meal: strong, frothy, traditionally brewed South Indian filter coffee.",
-                icon: "☕"
+                image: "/images/img1.jpg"
               }
             ].map((dish, i) => (
-               <div key={i} className="bg-forest border border-green-light/10 p-8 text-center group hover:-translate-y-2 hover:border-lime/40 transition-all duration-400">
-                 <div className="text-[42px] mb-6 grayscale mix-blend-luminosity opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500">{dish.icon}</div>
-                 <h3 className="font-playfair text-[24px] text-white mb-3">{dish.title}</h3>
-                 <p className="text-[14px] text-text-muted leading-[1.7]">{dish.desc}</p>
+               <div key={i} className="flex flex-col items-center text-center group relative cursor-pointer pt-6">
+                 {/* Decorative dot on hover */}
+                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3 h-3 bg-[#ff4a36] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                 
+                 <div className="w-[180px] h-[180px] sm:w-[220px] sm:h-[220px] rounded-full overflow-hidden mb-6 border border-white/10 group-hover:border-[#ff4a36]/50 transition-colors duration-500">
+                   <img 
+                     src={dish.image} 
+                     alt={dish.title} 
+                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                   />
+                 </div>
+                 <h3 className="font-sans font-bold text-[22px] text-white mb-3">{dish.title}</h3>
+                 <p className="text-[15px] font-sans text-text-muted/80 leading-[1.6] max-w-[260px] mx-auto">{dish.desc}</p>
                </div>
             ))}
           </div>
