@@ -11,8 +11,8 @@ const cormorant = Cormorant_Garamond({ subsets: ["latin"], weight: ['300', '400'
 const dmSans = DM_Sans({ subsets: ["latin"], weight: ['300', '400', '500'], variable: '--font-dm-sans' });
 
 export const metadata: Metadata = {
-  title: "Shreematha Refreshment | Pure. Natural. Udupi.",
-  description: "Authentic Udupi flavours crafted with 100% natural ingredients.",
+  title: "Shreematha Refreshment | Pure. Natural. Mangaluru.",
+  description: "Authentic Mangaluru flavours crafted with 100% natural ingredients.",
 };
 
 export default function RootLayout({

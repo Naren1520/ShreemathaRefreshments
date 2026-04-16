@@ -227,13 +227,24 @@ export default function PGPage() {
       </section>
 
       {/* SECTION 7: REVIEWS */}
-      <section className="py-32 relative z-20 bg-black border-white/5 border-t">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 text-center mb-16">
+      <section className="py-32 relative z-20 border-white/5 border-t overflow-hidden">
+        {/* Background Image for Reviews */}
+        <div className="absolute inset-0 w-full h-full z-0">
+          <div className="absolute inset-0 bg-black/80 z-10" />
+          <img 
+            src="/PGROOMS/img1pg.jpg" 
+            alt="PG Reviews Background" 
+            className="w-full h-full object-cover opacity-40 blur-sm"
+          />
+        </div>
+
+        <div className="relative z-20 max-w-7xl mx-auto px-6 md:px-12 text-center mb-16">
           <p className="text-[12px] uppercase tracking-[3px] text-[#E2DCC8]/60 mb-4 font-bold">Hear From The Guys</p>
           <h2 className="font-playfair text-4xl sm:text-6xl text-white">Resident Reviews</h2>
         </div>
         
-        <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* Marquee Container */}
+        <div className="relative z-20 w-fit flex gap-6 animate-[marquee_25s_linear_infinite] hover:[animation-play-state:paused] px-6">
           {[
             {
               name: "Rahul S.",
@@ -249,9 +260,45 @@ export default function PGPage() {
               name: "Manoj M.",
               role: "Student",
               text: "Best PG in the area! The CCTV surveillance and management makes it feel very secure. Also, the indoor games are a great stress buster."
-            }
+            },
+            {
+              name: "Arun Prakash",
+              role: "Working Professional",
+              text: "Spacious rooms, well maintained, and everything is sorted. Have been here for 6 months and haven't faced any single issue."
+            },
+            {
+              name: "Nithin Kumar",
+              role: "Student",
+              text: "Hot water anytime, amazing WiFi speed for my projects. And the meals from the attached restaurant are seriously top class!"
+            },
+            // Duplicate the reviews to create a seamless loop
+            {
+              name: "Rahul S.",
+              role: "Engineering Student",
+              text: "The unlimited WiFi and purely homestyle food makes this PG stand out. The study setup really helps during my exam time."
+            },
+            {
+              name: "Karthik Naik",
+              role: "IT Professional",
+              text: "Very peaceful environment. The fact that the hotel is attached means I never have to worry about skipping meals. Highly recommended!"
+            },
+            {
+              name: "Manoj M.",
+              role: "Student",
+              text: "Best PG in the area! The CCTV surveillance and management makes it feel very secure. Also, the indoor games are a great stress buster."
+            },
+            {
+              name: "Arun Prakash",
+              role: "Working Professional",
+              text: "Spacious rooms, well maintained, and everything is sorted. Have been here for 6 months and haven't faced any single issue."
+            },
+            {
+              name: "Nithin Kumar",
+              role: "Student",
+              text: "Hot water anytime, amazing WiFi speed for my projects. And the meals from the attached restaurant are seriously top class!"
+            },
           ].map((review, i) => (
-            <div key={i} className="p-8 rounded-[16px] border border-white/10 bg-[#0A0A0A] flex flex-col justify-between hover:border-[#E2DCC8]/30 transition-all duration-300">
+            <div key={i} className="p-8 rounded-[16px] border border-white/10 bg-black/60 backdrop-blur-md flex flex-col justify-between hover:border-[#E2DCC8]/30 transition-all duration-300 w-[350px] sm:w-[400px] shrink-0">
               <div>
                 <Quote className="text-[#E2DCC8]/40 mb-6" size={32} />
                 <p className="text-white/80 font-light leading-relaxed mb-6">"{review.text}"</p>

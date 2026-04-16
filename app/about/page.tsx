@@ -26,7 +26,7 @@ export default function About() {
              className="font-playfair text-[clamp(46px,7vw,80px)] leading-[1.05] text-white mb-6" 
           />
           <p className="text-[18px] md:text-[22px] leading-[1.8] text-cream/90 font-light font-cormorant tracking-[1px] max-w-[600px] mx-auto">
-            Discover the heart and soul behind Mangaluru's most cherished Udupi dining experience.
+            Discover the heart and soul behind Mangaluru's most cherished Adyar special dining experience.
           </p>
         </div>
       </section>

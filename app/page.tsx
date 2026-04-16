@@ -28,7 +28,7 @@ export default function Home() {
           />
           
           <p className="font-cormorant text-[22px] text-text-muted mb-5 font-light tracking-[1px] animate-fadeUp delay-300">
-            Authentic Udupi flavours crafted with 100% natural ingredients
+            Authentic Mangaluru flavours crafted with 100% natural ingredients
           </p>
           
           <div className="text-[15px] text-green-light tracking-[2px] uppercase mb-12 min-h-[24px] animate-fadeUp delay-400">
@@ -392,7 +392,7 @@ export default function Home() {
         <div className="absolute bottom-6 left-6 md:left-[60px] md:bottom-[60px] bg-forest/95 backdrop-blur-md border border-green-light/20 p-8 max-w-[400px] pointer-events-auto z-20 shadow-2xl">
            <h3 className="font-playfair text-[28px] text-white mb-2">Visit Us</h3>
            <p className="text-text-muted text-[14px] leading-relaxed mb-6 font-light">
-             Experience the finest Udupi cuisine right here in the heart of the city.
+             Experience the finest Mangaluru cuisine right here in the heart of the city.
            </p>
            <div className="space-y-4 text-[13px] text-cream">
               <div className="flex gap-3">

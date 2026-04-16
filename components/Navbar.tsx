@@ -53,7 +53,7 @@ export default function Navbar() {
               Shreematha
             </div>
             <div className="text-[7px] md:text-[9px] text-green-light tracking-widest uppercase">
-              Pure · Natural · Udupi
+              Pure · Natural · Mangaluru
             </div>
           </div>
         </Link>

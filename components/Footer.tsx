@@ -10,7 +10,7 @@ export default function Footer() {
             Shreematha Refreshment
           </div>
           <div className="text-[11px] tracking-[2px] text-lime uppercase mb-[16px]">
-            Pure · Natural · Udupi
+            Pure · Natural · Mangaluru
           </div>
           <div className="text-[13px] text-text-muted leading-[1.7]">
             Authentic South Indian cuisine crafted from 100% natural ingredients,
