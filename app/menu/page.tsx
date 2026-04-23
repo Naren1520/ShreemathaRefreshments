@@ -73,8 +73,7 @@ export default function Menu() {
 
   const filteredMenu = menuItems.filter((item) => {
     const matchesCategory = filter === "All" || item.category === filter;
-    const matchesSearch = item.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                          item.desc.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesSearch = item.name.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
   });
 
@@ -156,11 +155,7 @@ export default function Menu() {
                   <h3 className="font-playfair text-[24px] md:text-[28px] text-white mb-4 group-hover:text-lime transition-colors duration-300">
                     {item.name}
                   </h3>
-                  
-                  <p className="text-[14px] text-text-muted leading-[1.7] mb-8 px-2 max-w-[280px]">
-                    {item.desc}
-                  </p>
-                  
+
                   <div className="mt-auto w-full flex flex-col gap-4 border-t border-white/10 pt-6">
                     <div className="flex items-center justify-between w-full">
                       <span className="font-playfair text-[26px] text-white">
@@ -190,6 +185,7 @@ export default function Menu() {
                           <button
                             onClick={() => removeFromCart(item.id)}
                             className="w-8 h-8 rounded-full bg-black/50 text-white flex items-center justify-center hover:bg-lime hover:text-black transition-colors"
+                            aria-label={`Decrease quantity of ${item.name}`}
                           >
                             <Minus size={16} />
                           </button>
@@ -205,6 +201,7 @@ export default function Menu() {
                               })
                             }
                             className="w-8 h-8 rounded-full bg-lime text-black flex items-center justify-center hover:bg-green-light transition-colors"
+                            aria-label={`Increase quantity of ${item.name}`}
                           >
                             <Plus size={16} />
                           </button>

@@ -1,39 +1,40 @@
 import FadeInTitle from "@/components/FadeInTitle";
+import { BriefcaseBusiness, GraduationCap, User, UserRound, Users } from "lucide-react";
 
 export default function Reviews() {
   const reviews = [
     {
-      avatar: "👨",
+      avatar: <User size={18} strokeWidth={1.8} className="text-lime" />,
       name: "Ramesh Shetty",
       role: "Regular Guest · Mangaluru",
       text: "The Udupi Thali here is the best I have had outside of Udupi itself. Everything is fresh, authentic and served with such warmth. I come here every week without fail.",
     },
     {
-      avatar: "👩",
+      avatar: <UserRound size={18} strokeWidth={1.8} className="text-lime" />,
       name: "Priya Nair",
       role: "Food Enthusiast · Udupi",
       text: "Spotlessly clean restaurant, very fresh food — you can actually taste the difference when there are no artificial flavours. The filter coffee alone is worth the trip.",
     },
     {
-      avatar: "👨‍👩‍👧",
+      avatar: <Users size={18} strokeWidth={1.8} className="text-lime" />,
       name: "Suresh & Family",
       role: "Family Guest · Mangaluru",
       text: "My whole family loves coming here. The kids enjoy the dosas and we trust the hygiene completely. The green ambiance is so relaxing — feels like eating in a garden.",
     },
     {
-      avatar: "👴",
+      avatar: <User size={18} strokeWidth={1.8} className="text-lime" />,
       name: "Govind Bhat",
       role: "Local Resident",
       text: "I've been visiting Shreematha for years. The consistency in taste and quality is what keeps bringing me back. A true gem of Mangaluru.",
     },
     {
-      avatar: "👩‍💼",
+      avatar: <BriefcaseBusiness size={18} strokeWidth={1.8} className="text-lime" />,
       name: "Ananya Dixit",
       role: "Corporate Executive",
       text: "Perfect spot for a quick yet wholesome traditional lunch. The Neer Dosa with coconut curry is an absolute must-try!",
     },
     {
-      avatar: "🧑‍🎓",
+      avatar: <GraduationCap size={18} strokeWidth={1.8} className="text-lime" />,
       name: "Karan Shetty",
       role: "Student",
       text: "Affordable, delicious, and feels exactly like home-cooked meals. My favorite is the Mangaluru Buns. Simply amazing.",

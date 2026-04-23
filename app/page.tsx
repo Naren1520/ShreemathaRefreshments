@@ -55,7 +55,7 @@ export default function Home() {
           <div className="relative animate-fadeLeft">
             <div className="absolute -top-3 -left-3 w-[60px] h-[60px] border-t-2 border-l-2 border-lime"></div>
             <div className="w-full aspect-[4/5] bg-forest border border-green-light/20 relative flex items-center justify-center overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-[radial-gradient(ellipse_at_center,rgba(61,139,61,0.15),transparent_70%)]">
-              <div className="text-[180px] opacity-[0.35] saturate-[0.7]">🌱</div>
+              <img src="/images/img1.jpg" alt="Shreematha Refreshment" className="w-full h-full object-cover opacity-90" />
             </div>
             <div className="absolute -bottom-6 -right-6 md:bottom-[30px] md:-right-[24px] bg-green-dark border border-green-light/30 px-6 py-5 text-center">
               <div className="font-playfair text-[42px] leading-none text-lime">100%</div>
@@ -205,7 +205,7 @@ export default function Home() {
             className="font-playfair text-[clamp(40px,6vw,72px)] leading-[1.1] text-white my-6" 
           />
           <p className="text-[18px] leading-[1.8] text-cream/90 font-light font-cormorant tracking-[1px] max-w-[600px] mx-auto">
-            Experience the joy of authentic Udupi dining through the eyes of our beloved patrons. Because nothing makes us happier than seeing you smile.
+            Experience the joy of authentic Mangaluru dining through the eyes of our beloved patrons. Because nothing makes us happier than seeing you smile.
           </p>
         </div>
       </section>
@@ -278,7 +278,7 @@ export default function Home() {
               
               <div className="relative z-20 flex flex-col h-[55%] p-6 justify-between">
                 <div>
-                  <h3 className="font-playfair text-[24px] text-white leading-tight mb-2">Earthmovers</h3>
+                  <h3 className="font-playfair text-[24px] text-white leading-tight mb-2">Shreematha Earthmovers</h3>
                   <p className="text-[12px] font-sans text-white/50 leading-[1.6] mb-4">
                     Heavy-duty excavation and earthmoving for construction, infrastructure and land development projects.
                   </p>
@@ -305,7 +305,7 @@ export default function Home() {
               
               <div className="relative z-20 flex flex-col h-[55%] p-6 justify-between">
                 <div>
-                  <h3 className="font-playfair text-[24px] text-white leading-tight mb-2">PG Rooms</h3>
+                  <h3 className="font-playfair text-[24px] text-white leading-tight mb-2">Shreematha PG</h3>
                   <p className="text-[12px] font-sans text-white/50 leading-[1.6] mb-4">
                     Safe, affordable and homely PG accommodation for students and working professionals in Mangaluru.
                   </p>

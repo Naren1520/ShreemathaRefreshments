@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { Menu, X, ShoppingCart } from "lucide-react";
@@ -47,7 +48,16 @@ export default function Navbar() {
         }`}
       >
         <Link href="/" className="flex items-center gap-2 md:gap-3 decoration-none z-[60]">
-          <div className="w-9 h-9 md:w-11 md:h-11 border-[1.5px] border-green-light rounded-full flex items-center justify-center relative overflow-hidden before:content-['🌿'] before:text-sm md:before:text-xl"></div>
+          <div className="relative w-12 h-12 md:w-14 md:h-14 overflow-hidden rounded-full">
+            <Image
+              src="/images/logo.png"
+              alt="Shreematha Refreshment Logo"
+              fill
+              sizes="(max-width: 768px) 48px, 56px"
+              className="object-contain"
+              priority
+            />
+          </div>
           <div className="leading-tight">
             <div className="font-playfair text-[14px] md:text-base text-white tracking-wide">
               Shreematha
@@ -105,41 +115,43 @@ export default function Navbar() {
           >
             <ul className="flex flex-col gap-8 text-center list-none p-0 m-0">
               {links.map((link, index) => (
-                <motion.li 
-                  key={link.href}
+                <li key={link.href}>
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    transition={{ delay: index * 0.05 + 0.1 }}
+                  >
+                    <Link
+                      href={link.href}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className={`font-playfair text-[32px] tracking-wide transition-colors duration-300 ${
+                        pathname === link.href ? "text-lime" : "text-white hover:text-lime"
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  </motion.div>
+                </li>
+              ))}
+              
+              <li className="mt-8">
+                <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
-                  transition={{ delay: index * 0.05 + 0.1 }}
+                  transition={{ delay: links.length * 0.05 + 0.1 }}
                 >
                   <Link
-                    href={link.href}
+                    href="/cart"
                     onClick={() => setMobileMenuOpen(false)}
-                    className={`font-playfair text-[32px] tracking-wide transition-colors duration-300 ${
-                      pathname === link.href ? "text-lime" : "text-white hover:text-lime"
-                    }`}
+                    className="bg-lime text-black px-10 py-4 text-[12px] tracking-[3px] uppercase font-bold rounded-full flex items-center justify-center gap-2"
                   >
-                    {link.label}
+                    <ShoppingCart size={18} />
+                    Cart ({getTotalItems()})
                   </Link>
-                </motion.li>
-              ))}
-              
-              <motion.li
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 10 }}
-                transition={{ delay: links.length * 0.05 + 0.1 }}
-                className="mt-8"
-              >
-                <Link
-                  href="/cart"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="bg-lime text-black px-10 py-4 text-[12px] tracking-[3px] uppercase font-bold rounded-full flex items-center justify-center gap-2"
-                >
-                  <ShoppingCart size={18} />
-                  Cart ({getTotalItems()})
-                </Link>
-              </motion.li>
+                </motion.div>
+              </li>
             </ul>
           </motion.div>
         )}
