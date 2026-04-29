@@ -10,7 +10,7 @@ export default function About() {
       <FloatingLeaves />
       
       {/* 1. HERO SECTION */}
-      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-[url('/images/img1.jpg')] bg-cover bg-center bg-no-repeat bg-fixed pt-32">
+      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-[url('/images/img2.jpg')] bg-cover bg-center bg-no-repeat bg-fixed pt-32">
         <div className="absolute inset-0 bg-black/65 z-0" />
         <div className="relative z-10 text-center px-6 max-w-[800px] animate-fadeUp">
           <div className="inline-flex items-center gap-3 text-[10px] tracking-[4px] uppercase text-lime justify-center mb-6">
@@ -77,7 +77,7 @@ export default function About() {
             <div className="absolute -bottom-6 -right-6 md:-bottom-10 md:-right-10 w-[120px] h-[120px] border-b-[3px] border-r-[3px] border-lime/50 z-0"></div>
             
             <div className="w-full aspect-[3/4] relative z-10 shadow-2xl p-3 bg-forest border border-green-light/20">
-              <div className="w-full h-full relative overflow-hidden bg-[url('/images/img2.avif')] bg-cover bg-center">
+              <div className="w-full h-full relative overflow-hidden bg-[url('/images/img5.jpg')] bg-cover bg-center">
                  <div className="absolute inset-0 bg-black/20 hover:bg-black/0 transition-all duration-700" />
               </div>
             </div>

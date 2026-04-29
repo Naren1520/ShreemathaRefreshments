@@ -55,7 +55,7 @@ export default function Home() {
           <div className="relative animate-fadeLeft">
             <div className="absolute -top-3 -left-3 w-[60px] h-[60px] border-t-2 border-l-2 border-lime"></div>
             <div className="w-full aspect-[4/5] bg-forest border border-green-light/20 relative flex items-center justify-center overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-[radial-gradient(ellipse_at_center,rgba(61,139,61,0.15),transparent_70%)]">
-              <img src="/images/img1.jpg" alt="Shreematha Refreshment" className="w-full h-full object-cover opacity-90" />
+              <img src="/images/img4.jpg" alt="Shreematha Refreshment" className="w-full h-full object-cover opacity-90" />
             </div>
             <div className="absolute -bottom-6 -right-6 md:bottom-[30px] md:-right-[24px] bg-green-dark border border-green-light/30 px-6 py-5 text-center">
               <div className="font-playfair text-[42px] leading-none text-lime">100%</div>

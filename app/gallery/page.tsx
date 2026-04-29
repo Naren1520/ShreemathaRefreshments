@@ -4,9 +4,9 @@ import Image from "next/image";
 export default function Gallery() {
   const images = [
     { id: 1, src: "/images/img1.jpg", text: "The Green Dining Hall", gridClass: "col-span-1 row-span-1 md:col-span-2 md:row-span-2" },
-    { id: 2, src: "/images/img2.avif", text: "Fresh Ingredients Daily", gridClass: "col-span-1 row-span-1 md:col-span-1 md:row-span-1" },
+    { id: 2, src: "/images/img4.jpg", text: "Fresh Ingredients Daily", gridClass: "col-span-1 row-span-1 md:col-span-1 md:row-span-1" },
     { id: 3, src: "/images/img3.webp", text: "Garden Seating Area", gridClass: "col-span-1 row-span-1 md:col-span-1 md:row-span-2" },
-    { id: 4, src: "/images/img1.jpg", text: "Natural Produce Kitchen", gridClass: "col-span-1 row-span-1 md:col-span-1 md:row-span-1" },
+    { id: 4, src: "/images/img2.jpg", text: "Natural Produce Kitchen", gridClass: "col-span-1 row-span-1 md:col-span-1 md:row-span-1" },
     { id: 5, src: "/images/img2.avif", text: "Morning Ritual", gridClass: "col-span-1 row-span-1 md:col-span-2 md:row-span-1" },
   ];
 

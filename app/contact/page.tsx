@@ -44,7 +44,7 @@ export default function Contact() {
                 <span className="w-2 h-2 rounded-full bg-lime"></span> Address
               </div>
               <div className="text-[16px] text-white">
-                Shreematha Refreshment,<br />Mangaluru, Karnataka — 575001
+                Shreematha Refreshment,<br />Mangaluru, Karnataka — 575007
               </div>
             </div>
             
@@ -53,7 +53,7 @@ export default function Contact() {
                 <span className="w-2 h-2 rounded-full bg-lime"></span> Phone
               </div>
               <div className="text-[16px] text-white">
-                <a href="tel:+919999999999" className="text-white decoration-none hover:text-lime transition-colors duration-300">+91 99999 99999</a>
+                <a href="tel:+919900827864" className="text-white decoration-none hover:text-lime transition-colors duration-300">+91 99008 27864</a>
               </div>
             </div>
             
@@ -62,7 +62,7 @@ export default function Contact() {
                 <span className="w-2 h-2 rounded-full bg-lime"></span> Email
               </div>
               <div className="text-[16px] text-white">
-                <a href="mailto:hello@shreematharefreshment.com" className="text-white decoration-none hover:text-lime transition-colors duration-300">hello@shreematharefreshment.com</a>
+                <a href="mailto:shreemathaenterpises@gmail.com" className="text-white decoration-none hover:text-lime transition-colors duration-300">shreemathaenterpises@gmail.com</a>
               </div>
             </div>
             
@@ -71,7 +71,7 @@ export default function Contact() {
                 <span className="w-2 h-2 rounded-full bg-lime"></span> Hours
               </div>
               <div className="text-[16px] text-white">
-                Mon – Sun: 7:00 AM – 10:00 PM
+                Mon – Sun: 7:00 AM – 10:30 PM
               </div>
             </div>
           </div>
