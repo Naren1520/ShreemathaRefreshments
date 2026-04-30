@@ -18,8 +18,21 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Reservation requested:", formData);
-    alert("Reservation requested! (This is a demo frontend)");
+    
+    // Create structured message for WhatsApp
+    const message = `*🎉 Reservation Request - Shreematha Refreshment*\n\n*Guest Details:*\n📝 Name: ${formData.name}\n📱 Phone: ${formData.phone}\n📧 Email: ${formData.email}\n\n*Reservation Details:*\n📅 Date: ${formData.date}\n👥 Guests: ${formData.guests}\n${formData.requests ? `✍️ Special Requests: ${formData.requests}` : ''}`;
+    
+    // WhatsApp phone number (without + and spaces)
+    const phoneNumber = '919900827864';
+    
+    // Encode the message for URL
+    const encodedMessage = encodeURIComponent(message);
+    
+    // Create WhatsApp URL
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    
+    // Open WhatsApp in new tab
+    window.open(whatsappUrl, '_blank');
   };
 
   return (
@@ -101,7 +114,7 @@ export default function Contact() {
                 <input 
                   type="text" 
                   name="name" 
-                  placeholder="Ramesh Shetty" 
+                  placeholder="Name..." 
                   value={formData.name}
                   onChange={handleChange}
                   required
@@ -113,7 +126,7 @@ export default function Contact() {
                 <input 
                   type="tel" 
                   name="phone" 
-                  placeholder="+91 98765 43210" 
+                  placeholder="+91 99999 99999" 
                   value={formData.phone}
                   onChange={handleChange}
                   required
